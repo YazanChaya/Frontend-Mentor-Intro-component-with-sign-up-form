@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inconsolata:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/master.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <h1>Learn to code by watching others</h1>
+        <p class="p-left">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+      <div class="right">
+        <div class="right-top">
+          <p class="p-top-right">
+            Try it free 7 days <span>then $20/mo. thereafter</span>
+          </p>
+        </div>
+        <div class="right-bottom">
+          <form class="input-form" action="">
+            <div class="input-form">
+              <input type="text" placeholder="First Name" />
+              <img src="images/icon-error.svg" alt="" class="error-icon" />
+              <p class="error-message">First Name cannot be empty</p>
+            </div>
+            <div class="input-form">
+              <input type="text" placeholder="Last Name" />
+              <img src="images/icon-error.svg" alt="" class="error-icon" />
+              <p class="error-message">Last Name cannot be empty</p>
+            </div>
+            <div class="input-form">
+              <input type="email" placeholder="Your Email" />
+              <img src="images/icon-error.svg" alt="" class="error-icon" />
+              <p class="error-message">Your Email cannot be empty</p>
+            </div>
+            <div class="input-form">
+              <input type="password" placeholder="Password" />
+              <img src="images/icon-error.svg" alt="" class="error-icon" />
+              <p class="error-message">Your Password cannot be empty</p>
+            </div>
+            <button class="submit" type="submit">Claim your free trial</button>
+          </form>
+          <p class="p-in-form">
+            By clicking the button, you are agreeing to our
+            <span>Terms and Services</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

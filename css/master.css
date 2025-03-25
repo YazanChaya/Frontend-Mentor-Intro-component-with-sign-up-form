@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 100%, 74%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bg-intro-desktop.png");
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1000px;
+    width: 90%;
+    gap: 50px;
+    padding: 20px;
+}
+
+.container .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .left h1 {
+    font-size: 40px;
+}
+
+.container .left .p-left {
+    margin-top: 0;
+    line-height: 1.6;
+    color: rgb(255 255 255 / 80%);
+}
+
+.container .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .right .right-top {
+    padding: 10px;
+    background-color: hsl(248, 32%, 49%);
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 0 rgb(0 0 0 / 20%);
+}
+
+.container .right .right-top .p-top-right {
+    font-weight: bold;
+}
+
+.container .right .right-top .p-top-right span {
+    color: #ccc;
+    font-weight: normal;
+}
+
+.container .right .right-bottom {
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 5px 0 rgb(0 0 0 / 20%);
+}
+
+.container .right .right-bottom .input-form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px 25px;
+    border: 1px solid #ccc2c2;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    caret-color: hsl(248, 32%, 49%);
+}
+
+.container .right .right-bottom .input-form.active input {
+    border: 2px solid hsl(0, 100%, 74%);
+    color: hsl(0, 100%, 74%);
+}
+
+.container .right .right-bottom .input-form {
+    position: relative;
+}
+
+.container .right .right-bottom .input-form .error-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: none;
+}
+
+.container .right .right-bottom .input-form.active .error-icon {
+    display: block;
+}
+
+.container .right .right-bottom .input-form .error-message {
+    display: none;
+    color: hsl(0, 100%, 74%);
+    font-size: 12px;
+    font-style: italic;
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.container .right .right-bottom .input-form.active .error-message {
+    display: block;
+}
+
+
+.container .right .right-bottom .input-form input::placeholder {
+    font-weight: bold;
+    color: #9a9999;
+}
+
+.container .right .right-bottom .input-form input:focus {
+    outline-color: hsl(248, 32%, 49%);
+}
+
+.container .right .right-bottom .submit {
+    width: 100%;
+    padding: 15px;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: hsl(154, 59%, 51%);
+    cursor: pointer;
+}
+
+.container .right .right-bottom .p-in-form {
+    color: #ccc;
+    font-size: 10px;
+    text-align: center;
+}
+
+.container .right .right-bottom .p-in-form span {
+    color: hsl(0, 100%, 74%);
+}
+
+
+@media (max-width: 1015px) {
+    .container {
+        flex-direction: column;
+        width: 95%;
+        max-width: 600px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 530px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 375px;
+        gap: 20px;
+        padding: 15px;
+        position: relative;
+        transform: none;
+        left: auto;
+        top: auto;
+        margin: 50px auto;
+    }
+
+    body::before {
+        position: fixed;
+        background-image: url("../images/bg-intro-mobile.png");
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 100%;
+        max-width: 320px;
+        padding: 10px;
+    }
+}
